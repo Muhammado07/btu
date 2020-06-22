@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="geral">
+      <div id="calculo">
+        <div class="titulo">BTU Calculator</div>
+        <div class="conteudo">
+          <form id="form" class="name">
+            <div class="box">
+              <div class="esq">
+                <span class="desc"
+                  >What is the period of
+                  <br />
+                  exposure to the sun?</span
+                >
+                <a href="#" class="icon1"
+                  >?
+                  <span>
+                    Indicate at what time of day the sun reaches the environment
+                    with the greatest intensity.
+                  </span></a
+                >
+              </div>
+              <div class="dir">
+                <label><span class="iconsun">Sol</span></label>
+                <select id="sol">
+                  <option value="1">Good</option>
+                  <option value="2">Average</option>
+                  <option value="3">Sunny</option>
+                </select>
+              </div>
+            </div>
+            <div class="box2">
+              <div class="esq">
+                <span class="desc"
+                  >What is the width of
+                  <br />
+                  the environment?</span
+                >
+                <a href="#" class="icon1"
+                  >?
+                  <span>
+                    EX: Width: 10
+                  </span></a
+                >
+              </div>
+              <div class="dir">
+                <label><span class="iconarea">Area</span></label>
+                <input type="text" id="metro" size="10" class="form-control" />
+              </div>
+            </div>
+            <div class="box3">
+              <div class="esq">
+                <span class="desc"
+                  >What is the length of
+                  <br />
+                  the environment?</span
+                >
+                <a href="#" class="icon1"
+                  >?
+                  <span>
+                    EX: Length: 15
+                  </span></a
+                >
+              </div>
+              <div class="dir">
+                <label><span class="iconarea">Area</span></label>
+                <input type="text" id="metro1" size="10" class="form-control" />
+              </div>
+            </div>
+            <div class="box4">
+              <div class="esq">
+                <span class="desc"
+                  >How many people are <br />
+                  in the environment?</span
+                >
+                <a href="#" class="icon1"
+                  >?
+                  <span>
+                    Indicate the number of people occupying the
+                    environment.</span
+                  ></a
+                >
+              </div>
+              <div class="dir">
+                <label><span class="iconpeople">People</span></label>
+                <input type="text" id="people" size="10" class="form-control" />
+              </div>
+            </div>
+            <div class="box5">
+              <div class="esq">
+                <span class="desc"
+                  >What is the number of
+                  <br />
+                  electronic devices?</span
+                >
+                <a href="#" class="icon1"
+                  >?
+                  <span>
+                    Ex: Desktop, televisions, blue-ray, home-theater,
+                    micro-system and etc…
+                  </span></a
+                >
+              </div>
+              <div class="dir">
+                <label><span class="iconeletro">Eletronicos</span></label>
+                <input
+                  type="text"
+                  id="equipment"
+                  size="10"
+                  class="form-control"
+                />
+              </div>
+            </div>
+            <div id="botao">
+              <a href="#" onClick="calcular()" name="botão"
+                ><span>Calculate</span></a
+              >
+              <br />
+              <div id="texto"></div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div id="resposta">
+        <div class="titulo">
+          The approximate number of BTUs * for your environment is:
+        </div>
+        <div class="conteudo">
+          <div id="total"></div>
+          <div id="opcao"></div>
+          <div id="rodape"></div>
+        </div>
+      </div>
+    </div>
+    <div id="shadow"></div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.js"
+      integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
