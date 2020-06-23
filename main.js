@@ -15,16 +15,15 @@ $("div#rodape").click(function () {
 });
 function calcular() {
     if (document.getElementById("sol").value == 1) {
-        amb = document.getElementById("metro").value * document.getElementById("metro1").value * 600;
+        amb = (document.getElementById("metro").value * document.getElementById("metro1").value) * 440;
     } else if (document.getElementById("sol").value == 2) {
-        amb = document.getElementById("metro").value * document.getElementById("metro1").value * 800;
+        amb = (document.getElementById("metro").value * document.getElementById("metro1").value) * 640;
     }
     else {
-        amb = document.getElementById("metro").value * document.getElementById("metro1").value * 1000;
+        amb = (document.getElementById("metro").value * document.getElementById("metro1").value) * 840;
     }
 
-    people = document.getElementById("people").value * 600 - 600;
-    equipment = document.getElementById("equipment").value * 600;
+    people = document.getElementById("people").value * 450 - 450;
 
 
     document.getElementById("texto").innerHTML = "";
@@ -32,7 +31,22 @@ function calcular() {
     document.getElementById("total").innerHTML = "";
 
     if (form.metro.value == "") {
-        document.getElementById("texto").innerHTML += "Fill in the Width * Length field";
+        document.getElementById("texto").innerHTML += "Fill in the Length field";
+        form.metro.focus();
+        return false;
+    }
+    if (form.metro.value === '0') {
+        document.getElementById("texto").innerHTML += "Please Try Number higher than 0";
+        form.metro.focus();
+        return false;
+    }
+    if (form.metro1.value == "") {
+        document.getElementById("texto").innerHTML += "Fill in the Width field";
+        form.metro.focus();
+        return false;
+    }
+    if (form.metro1.value === '0') {
+        document.getElementById("texto").innerHTML += "Please Try Number higher than 0";
         form.metro.focus();
         return false;
     }
@@ -42,19 +56,23 @@ function calcular() {
         form.people.focus();
         return false;
     }
-    if (form.equipment.value == "") {
-        document.getElementById("texto").innerHTML += "Fill in the number of devices";
-        form.equipment.focus();
+    if (form.people.value === '0') {
+        document.getElementById("texto").innerHTML += "Please Try Number higher than 0";
+        form.people.focus();
         return false;
     }
     else {
 
-        document.getElementById("total").innerHTML += parseFloat(amb + people + equipment) + " BTUs";
+        document.getElementById("total").innerHTML += parseFloat(amb + people) + " BTUs";
+        document.getElementById("sol").value = 1;
+        document.getElementById("metro").value = "";
+        document.getElementById("metro1").value = "";
+        document.getElementById("people").value = "";
 
     }
 
 
-    total = (amb + people + equipment);
+    total = (amb + people);
     $('div#resposta').addClass('opa');
 
     document.getElementById("opcao").innerHTML = "";
@@ -64,45 +82,45 @@ function calcular() {
     if (total <= 7000) {
 
         $('div#resposta').addClass('opa');
-        document.getElementById("opcao").innerHTML = "<a href=\"https://york.com.sa/en/online-store-york\">View suitable products</a>";
-        document.getElementById("rodape").innerHTML = "<a >To calculate click here</a>";
-
-    }
-    if (total > 7000 && total < 9099) {
-
-        $('div#resposta').addClass('opa');
         document.getElementById("opcao").innerHTML = "<a href=\"https://york.com.sa/en/producttag/43/12000-btu\">View suitable products</a>";
-        document.getElementById("rodape").innerHTML = "<a >To calculate click here</a>";
-    }
+        document.getElementById("rodape").innerHTML = "<a >Recalculate again</a>";
 
-    if (total > 9100 && total < 12099) {
+    }
+    if (total > 7000 && total < 18099) {
 
         $('div#resposta').addClass('opa');
-
-        document.getElementById("opcao").innerHTML = "<a href=\"https://york.com.sa/en/online-store-york\"> View suitable products</a>";
-        document.getElementById("rodape").innerHTML = "<a >To calculate click here</a>";
-    }
-
-    if (total > 12100 && total < 18099) {
-
-        $('div#resposta').addClass('opa');
-        document.getElementById("opcao").innerHTML = "<a href=\"https://york.com.sa/en/online-store-york\">View suitable products</a>";
-        document.getElementById("rodape").innerHTML = "<a > To calculate click here</a>";
+        document.getElementById("opcao").innerHTML = "<a href=\"https://york.com.sa/en/producttag/23/18000-btu\">View suitable products</a>";
+        document.getElementById("rodape").innerHTML = "<a >Recalculate again</a>";
     }
 
     if (total > 18100 && total < 24099) {
 
         $('div#resposta').addClass('opa');
-        document.getElementById("opcao").innerHTML = "<a href=\"https://york.com.sa/en/online-store-york\">View suitable products</a>";
-        document.getElementById("rodape").innerHTML = "<a >To calculate click here</a>";
+
+        document.getElementById("opcao").innerHTML = "<a href=\"https://york.com.sa/en/producttag/30/24000-btu\"> View suitable products</a>";
+        document.getElementById("rodape").innerHTML = "<a >Recalculate again</a>";
     }
 
-    if (total > 24100) {
+    if (total > 24100 && total < 30099) {
+
+        $('div#resposta').addClass('opa');
+        document.getElementById("opcao").innerHTML = "<a href=\"https://york.com.sa/en/producttag/52/30000-btu\">View suitable products</a>";
+        document.getElementById("rodape").innerHTML = "<a > Recalculate again</a>";
+    }
+
+    if (total > 30100 && total < 55099) {
+
+        $('div#resposta').addClass('opa');
+        document.getElementById("opcao").innerHTML = "<a href=\"https://york.com.sa/en/producttag/64/55000-btu\">View suitable products</a>";
+        document.getElementById("rodape").innerHTML = "<a >Recalculate again</a>";
+    }
+
+    if (total > 60000) {
         $('div#resposta').addClass('opa');
         $('div#total').addClass('totaldois');
         $('div#rodape').addClass('rodapedois');
         document.getElementById("opcao").innerHTML = "<span>Your environment needs a special project. Contact our technical team through telesales: <b> <a class='tel-link' href='tel:920003588'>920003588</a> </b></span>";
-        document.getElementById("rodape").innerHTML += "<a > To calculate click here</a>";
+        document.getElementById("rodape").innerHTML += "<a > Recalculate again</a>";
     }
 
 }
