@@ -651,7 +651,9 @@ body {
     width: 100%;
   }
   #geral #resposta .titulo {
-    font-size: 16px;
+    background: url(bg.png) top center no-repeat;
+    background-size: cover;
+    height: 245px;
   }
   #geral #calculo .conteudo,
   #geral #resposta .conteudo {
@@ -663,7 +665,7 @@ body {
     align-items: center;
     flex-direction: column;
     padding: 0 20px;
-    margin: 0 auto;
+    margin: 40px auto;
   }
   #geral .box2,
   #geral .box3,
@@ -685,7 +687,7 @@ body {
     margin-top: 50px;
   }
   #geral .opa {
-    top: -95% !important;
+    top: -102% !important;
   }
   #geral #opcao a,
   #geral #rodape a {
