@@ -115,7 +115,7 @@ function calcular() {
         document.getElementById("rodape").innerHTML = "<a >Recalculate again</a>";
     }
 
-    if (total > 60000) {
+    if (total > 55100) {
         $('div#resposta').addClass('opa');
         $('div#total').addClass('totaldois');
         $('div#rodape').addClass('rodapedois');

@@ -3,7 +3,8 @@ body {
 }
 #geral {
   width: 997px;
-  height: 348px;
+  /* height: 348px; */
+  height: 500px;
   border: 1px solid #ccc;
   overflow: hidden;
   font-family: arial;
@@ -23,7 +24,8 @@ body {
 }
 #geral #calculo {
   width: 997px;
-  height: 348px;
+  /* height: 348px; */
+  height: 500px;
   position: relative;
 }
 #geral #resposta {
@@ -49,10 +51,10 @@ body {
   transition: all 0.3s ease;
   position: relative;
   display: block;
-  top: -348px !important;
+  top: -255px !important;
 }
 #geral #calculo .titulo {
-  width: 997px;
+  /* width: 997px;
   height: 58px;
   background-image: url(https://imagens.fastshop.com.br/imgbanner/bg_title.jpg);
   text-align: center;
@@ -60,18 +62,10 @@ body {
   padding-top: 10px;
   margin-bottom: 30px;
   font-size: 22px;
-  font-weight: bold;
-}
-#geral #resposta .titulo {
-  width: 997px;
-  height: 58px;
-  background-image: url(https://imagens.fastshop.com.br/imgbanner/bg_title.jpg);
-  text-align: center;
-  color: #00539e;
-  padding-top: 10px;
-  margin-bottom: 30px;
-  font-size: 22px;
-  font-weight: bold;
+  font-weight: bold; */
+  background: url("bg.png") top center no-repeat;
+  background-size: cover;
+  height: 245px;
 }
 #geral #resposta .titulo span {
   font-style: italic;
@@ -79,13 +73,15 @@ body {
 }
 #geral #calculo .conteudo {
   width: 958px;
-  height: 217px;
-  margin: 0 auto;
+  /* height: 217px;
+  margin: 0 auto; */
+  height: 450px;
+  margin: 20px auto;
 }
 #geral #resposta .conteudo {
   width: 958px;
   height: 114px;
-  margin: 0 auto;
+  margin: 15px auto;
 }
 #geral .box {
   width: 304px;
@@ -484,7 +480,7 @@ body {
   color: red;
   text-align: center;
   float: left;
-  margin-top: 15px;
+  margin-top: 5px;
   margin-bottom: 15px;
 }
 #geral #total {
@@ -535,7 +531,7 @@ body {
 }
 #geral #opcao span {
   width: 500px;
-  height: 45px;
+  height: 50px;
   font-family: "arial";
   color: #fff;
   background-color: #999;
@@ -544,7 +540,7 @@ body {
   float: right;
   text-decoration: none;
   text-align: center;
-  padding-top: 5px;
+  padding: 5px 20px;
 }
 #geral #rodape a {
   width: 299px;
@@ -664,6 +660,7 @@ body {
     align-items: center;
     flex-direction: column;
     padding: 0 20px;
+    margin: 0 auto;
   }
   #geral .box2,
   #geral .box3,
@@ -685,7 +682,7 @@ body {
     margin-top: 50px;
   }
   #geral .opa {
-    top: -100% !important;
+    top: -90% !important;
   }
   #geral #opcao a,
   #geral #rodape a {
