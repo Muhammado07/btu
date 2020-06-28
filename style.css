@@ -643,6 +643,9 @@ body {
     align-items: center;
     flex-direction: column;
   }
+  #geral #calculo .titulo {
+    background-position: 70% center;
+  }
   #geral #calculo .titulo,
   #geral #resposta .titulo {
     width: 100%;
