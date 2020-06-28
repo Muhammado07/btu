@@ -63,7 +63,7 @@ body {
   margin-bottom: 30px;
   font-size: 22px;
   font-weight: bold; */
-  background: url("bg.png") top center no-repeat;
+  background: url("bg.png") center center no-repeat;
   background-size: cover;
   height: 245px;
 }
@@ -651,7 +651,7 @@ body {
     width: 100%;
   }
   #geral #resposta .titulo {
-    background: url(bg.png) top center no-repeat;
+    background: url(bg.png) 70% center no-repeat;
     background-size: cover;
     height: 245px;
   }
